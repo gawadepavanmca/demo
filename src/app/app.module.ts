@@ -1,8 +1,10 @@
+import { TodoService } from './page/todo/service/todo.service';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { TodoComponent } from './page/todo/todo.component';
+import {  HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -10,9 +12,11 @@ import { TodoComponent } from './page/todo/todo.component';
     TodoComponent
   ],
   imports: [
-    BrowserModule
+    NgbModule,
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [TodoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,1 +1,25 @@
-<p>todo works!</p>
+<div class="container">
+    <div class="row">
+        <div>
+            <h1> <b>Completed List</b></h1>
+        </div>
+        <div class="shadow-lg p-3 mb-5 pl-3 bg-white rounded col-md-4 col-lg-4 col-sm-1 col-xl-4" *ngFor="let item of todoListCompleted;">
+            <p>{{item.title}}</p>
+            <p>{{item.userId}}</p>
+            <p>{{item.completed}}</p>
+            <p>{{item.id}}</p>
+        </div>
+    </div>
+    <div class="row">
+        <div>
+            <h1> <b>Pendding List</b></h1>
+
+        </div>
+        <div class="shadow-lg p-3 mb-5 pl-3 bg-white rounded col-md-4 col-lg-4 col-sm-1 col-xl-4" *ngFor="let item of todoListPending;">
+            <p>{{item.title}}</p>
+            <p>{{item.userId}}</p>
+            <p>{{item.completed}}</p>
+            <p>{{item.id}}</p>
+        </div>
+    </div>
+</div>
